@@ -66,7 +66,8 @@
 
  .nav-link:hover {
     /* background-color: rgba(200, 200, 200, 0.5); Light grey mostly transparent */
-    box-shadow: 5px 10px 5px 0px rgb(147,147,147,0.65);
+    box-shadow: 5px 10px 5px 0px rgb(0,0,0,0.65);
+    background-color: rgb(147, 147, 147,0.75);
   }
   
   /* Style when selected */
@@ -77,4 +78,15 @@
   .nav-link a:active,
   .nav-link a:focus {
     color: white;
+  }
+
+ .dashboard-sectxn1{
+    background-image: url(../images/header-section1.jpg);
+    background-color: rgba(255, 255, 255, 0.8);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 65vh;
   }
