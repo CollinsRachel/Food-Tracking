@@ -1,45 +1,80 @@
-:root {
-    --size-10:0.625rem;
-    --size-12:0.75rem;
-    --size-14:0.875rem;
-    --size-16:1rem;
-    --size-18:1.125rem;
-    --size-20:1.25rem;
-    --size-25:1.5625rem;
-    --size-30:1.875rem;
-    --size-40:2.5rem;
-    --size-50:3.125rem;
-    --size-75: 4.6875rem;
-    --size-100:6.25rem;
-    --size-150:9.375rem;
-    --size-200:12.5rem;
-    --color-lt-brown: #E7BA99; 
-    --color-white: #DBDBC1;
-}
+.navbar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 5;
+    transition: ease-in-out 0.3s; 
+    padding: 1rem;
+ }
+ 
+ .navbar .container {
+     display: flex;
+     align-items: center;
+ }
+ 
+ .navbar-brand {
+     margin-right: auto;
+     font-size: 2rem;
+     font-weight: 700;
+     transition: ease-in-out 0.3s;
+     color: black;
+ }
+ 
+ .navbar.sticky {
+     background-color: white;
+     box-shadow: 0px 0px 20px rgba(48, 63, 100, 0.2);
+ }
+ 
+ .navbar.sticky .navbar-toggler span, 
+ .navbar.sticky .navbar-brand {
+     color: black;
+ }
+ 
+ .navbar-toggler {
+     position: absolute;
+     right: var(--size-20);
+     top: var(--size-10);
+     outline: none;
+     background-color: transparent;
+     border: 1px solid transparent;
+ }
+ 
+ .navbar-toggler span {
+     color: white;
+     font-size: var(--size-20);
+     cursor: pointer;
+     pointer-events: none;
+ }
+ 
+ [aria-controls="navbarDropdown"] {
+     display: none;
+ }
+ 
+ .navbar-nav {
+     display: flex;
+ }
+ .nav-link a {
+     color: black;
+     font-size: 0.8125rem;
+     font-weight: 600;
+     font-family: "Hind", sans-serif;
+     text-transform: uppercase;
+     margin: var(--size-10) var(--size-10);
+     line-height: var(--size-20);
+ }
 
-html{ scroll-behavior: smooth; }
-
-ul{
-    display: list-item;
-    align-items: center;
-    padding: 0;
-    margin: 0;
-    list-style: none;
-}
-
-li { margin: 0 var(--size-30); }
-
-a { text-decoration: none; }
-h1, p {margin: 0;}
-
-section,
-footer,
-header,
-main,
-nav {
-  display: block;
-}
-
-*, *::before, *::after {
-  box-sizing: border-box;
-}
+ .nav-link:hover {
+    /* background-color: rgba(200, 200, 200, 0.5); Light grey mostly transparent */
+    box-shadow: 5px 10px 5px 0px rgb(147,147,147,0.65);
+  }
+  
+  /* Style when selected */
+  .nav-link:active,
+  .nav-link:focus {
+    background-color: black;
+  }
+  .nav-link a:active,
+  .nav-link a:focus {
+    color: white;
+  }
