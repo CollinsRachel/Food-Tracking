@@ -94,10 +94,6 @@
   .search-box {
     font-size: var(--size-20);
   }
-  label {
-    display: flex;
-    flex-direction: row;
-  }
 
   input {
     width: 100vh;
